@@ -10,15 +10,15 @@ suite('Unit Tests', function () {
     });
     // #2
     test('#isDefined, #isUndefined', function () {
-      assert.isNull.fail(null, 'null is not undefined');
+      assert.fail(null, 'null is not undefined');
       assert.fail(undefined, 'undefined IS undefined');
-      assert.isNotNull.fail('hello', 'A string is not undefined');
+      assert.fail('hello', 'A string is not undefined');
     });
     // #3
     test('#isOk, #isNotOk', function () {
-      assert.isNull.fail(null, 'null is falsey');
+      assert.fail(null, 'null is falsey');
       assert.fail("I'm truthy", 'A string is truthy');
-      assert.isNotNull.fail(true, 'true is truthy');
+      assert.fail(true, 'true is truthy');
     });
     // #4
     test('#isTrue, #isNotTrue', function () {
